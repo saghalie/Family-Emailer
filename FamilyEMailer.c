@@ -13,7 +13,7 @@
 
 #define VERSION "0"
 #define REVISION "01a"
-#define DATBUF_SIZE 1024
+#define DATBUF_SIZE 512
 
 struct Library * MUIMasterBase = NULL;
 
@@ -380,7 +380,7 @@ struct ObjApp * CreateApp(void)
 		MUIA_Application_Base	     , "FamilyEmailer",
 		MUIA_Application_Title	     , "Family EMailer",
 		MUIA_Application_Version     , "v0.01a",
-		MUIA_Application_Copyright   , "Copyright © 2006\nAll Rights Reserved.",
+		MUIA_Application_Copyright   , "Copyright © 2020\nAll Rights Reserved.",
 		MUIA_Application_Description , "Family Emailer",
 		MUIA_Application_Menustrip   , MUI_MakeObject(MUIO_MenustripNM, fe_Menu,0),
 		SubWindow, Object->MainWindow,
@@ -776,7 +776,7 @@ struct Prefs *BuildDefPrefs (void)
 	strcpy (prefs->UserName, "user@somewhere.net");
 	strcpy (prefs->Password, "yourpassword");
 	strcpy (prefs->SmtpName, "mail.somewhere.net");
-	strcpy (prefs->Subject,  "Family EMailer v0.01a");
+	strcpy (prefs->Subject,  "[FE v0.01a] ");
 	strcpy (prefs->EditFile, "ed");
 	strcpy (prefs->AddrFile, "address.txt");
 	strcpy (prefs->MesgFile, "message.txt");
